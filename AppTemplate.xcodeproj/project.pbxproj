@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		55F3C70A2CB13EEC00D3B370 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 55F3C7092CB13EEC00D3B370 /* Alamofire */; };
+		55F3C70F2CB13F9400D3B370 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 55F3C70E2CB13F9400D3B370 /* Swinject */; };
+		55F3C7142CB1401A00D3B370 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 55F3C7132CB1401A00D3B370 /* Kingfisher */; };
+		55F3C7202CB142B000D3B370 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 55F3C71F2CB142B000D3B370 /* Realm */; };
+		55F3C7252CB143D900D3B370 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 55F3C7242CB143D900D3B370 /* Toast */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		553E644D2CB04FDB00815194 /* AppTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +44,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F3C7142CB1401A00D3B370 /* Kingfisher in Frameworks */,
+				55F3C70A2CB13EEC00D3B370 /* Alamofire in Frameworks */,
+				55F3C7202CB142B000D3B370 /* Realm in Frameworks */,
+				55F3C7252CB143D900D3B370 /* Toast in Frameworks */,
+				55F3C70F2CB13F9400D3B370 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +81,7 @@
 				553E64492CB04FDB00815194 /* Sources */,
 				553E644A2CB04FDB00815194 /* Frameworks */,
 				553E644B2CB04FDB00815194 /* Resources */,
+				55F3C7262CB1446F00D3B370 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -78,6 +92,11 @@
 			);
 			name = AppTemplate;
 			packageProductDependencies = (
+				55F3C7092CB13EEC00D3B370 /* Alamofire */,
+				55F3C70E2CB13F9400D3B370 /* Swinject */,
+				55F3C7132CB1401A00D3B370 /* Kingfisher */,
+				55F3C71F2CB142B000D3B370 /* Realm */,
+				55F3C7242CB143D900D3B370 /* Toast */,
 			);
 			productName = AppTemplate;
 			productReference = 553E644D2CB04FDB00815194 /* AppTemplate.app */;
@@ -107,6 +126,14 @@
 			);
 			mainGroup = 553E64442CB04FDB00815194;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				55F3C7082CB13EEC00D3B370 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				55F3C70D2CB13F9400D3B370 /* XCRemoteSwiftPackageReference "Swinject" */,
+				55F3C7122CB1401A00D3B370 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				55F3C71D2CB141F300D3B370 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				55F3C71E2CB142B000D3B370 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				55F3C7232CB143D900D3B370 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 553E644E2CB04FDB00815194 /* Products */;
 			projectDirPath = "";
@@ -126,6 +153,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55F3C7262CB1446F00D3B370 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwifLint not installed, download from https//github.com/realm/swiftlint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		553E64492CB04FDB00815194 /* Sources */ = {
@@ -231,7 +278,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -294,7 +341,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -335,6 +382,85 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55F3C7082CB13EEC00D3B370 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		55F3C70D2CB13F9400D3B370 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		55F3C7122CB1401A00D3B370 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.3;
+			};
+		};
+		55F3C71D2CB141F300D3B370 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.57.0;
+			};
+		};
+		55F3C71E2CB142B000D3B370 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		55F3C7232CB143D900D3B370 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55F3C7092CB13EEC00D3B370 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55F3C7082CB13EEC00D3B370 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		55F3C70E2CB13F9400D3B370 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55F3C70D2CB13F9400D3B370 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		55F3C7132CB1401A00D3B370 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55F3C7122CB1401A00D3B370 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		55F3C71F2CB142B000D3B370 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55F3C71E2CB142B000D3B370 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		55F3C7242CB143D900D3B370 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55F3C7232CB143D900D3B370 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 553E64452CB04FDB00815194 /* Project object */;
 }
